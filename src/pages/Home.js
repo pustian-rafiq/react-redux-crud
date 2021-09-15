@@ -8,9 +8,12 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import './style.css'
 import {useSelector, useDispatch} from 'react-redux'
-import {loadUsers} from '../redux/actions'
+import {loadUsers, deleteUser} from '../redux/actions'
+import {toast} from 'react-toastify'
 const columns = [
     {
         id: 'id',
@@ -35,6 +38,7 @@ const columns = [
       align: 'center',
       format: (value) => value.toLocaleString('en-US'),
     },
+   
 
   ];
   
@@ -77,6 +81,16 @@ function Home() {
         dispatch(loadUsers())
     },[])
 
+
+//Delete user
+const handleDelete = (id)=> {
+  if(window.confirm("Are you sure to delete?")){
+    dispatch(deleteUser(id))
+    toast.success("User deleted successfully!")
+  }else{
+  toast.success("User not deleted!")
+  }
+}
     return (
         <>
       <Paper className={classes.root}>
@@ -92,21 +106,37 @@ function Home() {
                 >
                   {column.label}
                 </TableCell>
+
+ 
               ))}
+              <TableCell  align="center"
+                  >
+               Actions
+              </TableCell>
+             
             </TableRow>
           </TableHead>
             <TableBody>
             {users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((user) => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={user.code}>
+                <TableRow hover role="checkbox" tabIndex={-1} key={user.id}>
                   {columns.map((column) => {
                     const value = user[column.id];
                     return (
                       <TableCell key={column.id} align={column.align}>
                         {column.format && typeof value === 'number' ? column.format(value) : value}
+                        
                       </TableCell>
+                      
                     );
+                   
                   })}
+                       <ButtonGroup variant="contained" aria-label="contained primary button group" style={{ margin:'7px 5px 7px 0'}}> 
+                        <Button style={{marginRight:'5px'}} color="primary">Edit</Button>
+                        <Button  color="secondary" onClick={()=>handleDelete(user.id)}>Delete</Button>
+                      
+                     </ButtonGroup>
+                  
                 </TableRow>
               );
             })}

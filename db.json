@@ -1,79 +1,67 @@
 {
-    "users":[
-        {
-            "name": "Md. Rafiqul Islam",
-            "address": "Kaliganj,Satkhira",
-            "email": "rafiq@gmail.com",
-            "contact": "01991166550",
-            "id": 1
-        },
-        {
-            "name": "Md. Rabiul Islam",
-            "address": "Satkhira Sador",
-            "email": "rabiul@gmail.com",
-            "contact": "01991166550",
-            "id": 2
-        },
-        {
-            "name": "Md. Rafiul Islam",
-            "address": "Kaliganj",
-            "email": "ruhan@gmail.com",
-            "contact": "01991166550",
-            "id": 3
-        },
-        {
-            "name": "Md. Alif Islam",
-            "address": "Pabna",
-            "email": "alif@gmail.com",
-            "contact": "01991166550",
-            "id": 4
-        },
-        {
-            "name": "Kmarunnahar",
-            "address": "Dhaka",
-            "email": "kmnahar@gmail.com",
-            "contact": "01991166550",
-            "id": 5
-        
-        },
-        {
-            "name": "Siddiqa",
-            "address": "Dhaka",
-            "email": "kmnahar@gmail.com",
-            "contact": "01991166550",
-            "id": 6
-        
-        },
-        {
-            "name": "Rakibul Islam",
-            "address": "Dhaka",
-            "email": "kmnahar@gmail.com",
-            "contact": "01991166550",
-            "id": 7
- 
-        },
-        {
-            "name": "Saifullah",
-            "address": "Dhaka",
-            "email": "kmnahar@gmail.com",
-            "contact": "01991166550",
-            "id": 8
- 
-        },
-        {
-            "name": "Ruma",
-            "address": "Dhaka",
-            "email": "kmnahar@gmail.com",
-            "contact": "01991166550",
-            "id": 9
-  
-        },
-        {
-            "name": "Rahman",
-            "address": "Dhaka",
-            "email": "kmnahar@gmail.com",
-            "contact": "01991166550",
-            "id": 10
-        }
-    ]
+  "users": [
+    {
+      "name": "Md. Rafiqul Islam",
+      "address": "Kaliganj,Satkhira",
+      "email": "rafiq@gmail.com",
+      "contact": "01991166550",
+      "id": 1
+    },
+    {
+      "name": "Md. Rabiul Islam",
+      "address": "Satkhira Sador",
+      "email": "rabiul@gmail.com",
+      "contact": "01991166550",
+      "id": 2
+    },
+    {
+      "name": "Md. Rafiul Islam",
+      "address": "Kaliganj",
+      "email": "ruhan@gmail.com",
+      "contact": "01991166550",
+      "id": 3
+    },
+    {
+      "name": "Md. Alif Islam",
+      "address": "Pabna",
+      "email": "alif@gmail.com",
+      "contact": "01991166550",
+      "id": 4
+    },
+    {
+      "name": "Kmarunnahar",
+      "address": "Dhaka",
+      "email": "kmnahar@gmail.com",
+      "contact": "01991166550",
+      "id": 5
+    },
+    {
+      "name": "Siddiqa",
+      "address": "Dhaka",
+      "email": "kmnahar@gmail.com",
+      "contact": "01991166550",
+      "id": 6
+    },
+    {
+      "name": "Rakibul Islam",
+      "address": "Dhaka",
+      "email": "kmnahar@gmail.com",
+      "contact": "01991166550",
+      "id": 7
+    },
+    {
+      "name": "Saifullah",
+      "address": "Dhaka",
+      "email": "kmnahar@gmail.com",
+      "contact": "01991166550",
+      "id": 8
+    },
+    {
+      "name": "Ruma",
+      "address": "Dhaka",
+      "email": "kmnahar@gmail.com",
+      "contact": "01991166550",
+      "id": 9
+    }
+  ]
 }
