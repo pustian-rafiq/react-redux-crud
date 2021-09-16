@@ -10,7 +10,12 @@ export const userDeleted =()=> ({
    type: types.DELETE_USER,
    
 })
+export const userAdded =()=> ({
+   type: types.ADD_USER,
+   
+})
 
+//Fetch user
 export const loadUsers =()=> {
     return function(dispatch){
         axios.get(`${process.env.REACT_APP_API}`)
@@ -21,7 +26,7 @@ export const loadUsers =()=> {
         
     }
 }
-
+// Delete User
 export const deleteUser =(id)=> {
     return function(dispatch){
         axios.delete(`${process.env.REACT_APP_API}/${id}`)
@@ -30,6 +35,19 @@ export const deleteUser =(id)=> {
             dispatch(userDeleted())
             //Delete user and load the users
             dispatch(loadUsers())
+        }).catch(error => console.log(error))
+        
+    }
+}
+//Add new user
+export const addUser =(user)=> {
+    return function(dispatch){
+        axios.post(`${process.env.REACT_APP_API}`, user)
+        .then(resp => {
+            console.log("resp")
+            dispatch(userAdded())
+            //Delete user and load the users
+            //dispatch(loadUsers())
         }).catch(error => console.log(error))
         
     }

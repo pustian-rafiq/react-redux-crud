@@ -14,6 +14,7 @@ import './style.css'
 import {useSelector, useDispatch} from 'react-redux'
 import {loadUsers, deleteUser} from '../redux/actions'
 import {toast} from 'react-toastify'
+import {useHistory} from 'react-router-dom'
 const columns = [
     {
         id: 'id',
@@ -63,6 +64,7 @@ const columns = [
 function Home() {
 
     const classes = useStyles();
+    const history = useHistory()
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
   
@@ -75,7 +77,7 @@ function Home() {
       setPage(0);
     };
 
-    const {users} = useSelector( state => state.data)
+    const {users,loading} = useSelector( state => state.data)
     const dispatch = useDispatch()
     useEffect( ()=> {
         dispatch(loadUsers())
@@ -91,8 +93,17 @@ const handleDelete = (id)=> {
   toast.success("User not deleted!")
   }
 }
+if(loading){
+ return <h1>loading.........</h1>
+} 
     return (
         <>
+        
+      
+        <div style={{float:'left',marginLeft:'100px'}}>
+         <Button   color="primary" variant="contained" onClick={()=> history.push('/add-user')}>Add New User</Button>
+        </div>
+    
       <Paper className={classes.root}>
       <TableContainer className={classes.container}>
         <Table stickyHeader aria-label="sticky table">
