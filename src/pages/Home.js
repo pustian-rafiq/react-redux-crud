@@ -143,7 +143,7 @@ if(loading){
                    
                   })}
                        <ButtonGroup variant="contained" aria-label="contained primary button group" style={{ margin:'7px 5px 7px 0'}}> 
-                        <Button style={{marginRight:'5px'}} color="primary">Edit</Button>
+                        <Button style={{marginRight:'5px'}} color="primary" onClick={()=> history.push(`/edit-user/${user.id}`)} >Edit</Button>
                         <Button  color="secondary" onClick={()=>handleDelete(user.id)}>Delete</Button>
                       
                      </ButtonGroup>
